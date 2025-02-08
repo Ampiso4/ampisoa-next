@@ -1,11 +1,21 @@
 "use client";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/ui/nav-menu";
 import { ProjectCard } from "@/components/ui/project-card";
 import Link from "next/link";
 
 export default function Home() {
+  const collaborators = Array.from({ length: 50 }, (_, i) => ({
+    id: i + 1,
+    name: `Team Member ${i + 1}`,
+    role: ["Developer", "Designer", "Product Manager", "DevOps", "QA Engineer"][
+      Math.floor(Math.random() * 5)
+    ],
+    avatar: `https://picsum.photos/seed/person${i + 1}/100/100`,
+  }));
+
   const projects = [
     {
       title: "Fitness Tracking App",
@@ -132,6 +142,44 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Collaborators Section */}
+      <section className="container py-20 border-t">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">Our Team</h2>
+          <p className="text-lg text-muted-foreground max-w-[800px] mx-auto">
+            Meet our talented team of developers, designers, and product
+            specialists who bring these projects to life.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-6 justify-center">
+          {collaborators.map((collaborator) => (
+            <div
+              key={collaborator.id}
+              className="flex flex-col items-center gap-2 transition-transform hover:scale-105"
+            >
+              <Avatar className="h-16 w-16 border-2 border-primary/20">
+                <AvatarImage
+                  src={collaborator.avatar}
+                  alt={collaborator.name}
+                />
+                <AvatarFallback>
+                  {collaborator.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </AvatarFallback>
+              </Avatar>
+              <div className="text-center">
+                <p className="font-medium text-sm">{collaborator.name}</p>
+                <p className="text-xs text-muted-foreground">
+                  {collaborator.role}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
