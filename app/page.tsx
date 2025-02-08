@@ -201,15 +201,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-rows-2 gap-3 max-w-6xl mx-auto">
+          <div className="grid grid-rows-2 gap-3 max-w-6xl mx-auto px-4">
             {Array.from({ length: 2 }).map((_, rowIndex) => (
-              <div key={rowIndex} className="flex gap-3 w-full">
+              <div
+                key={rowIndex}
+                className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full"
+              >
                 {collaborators
                   .slice(rowIndex * 8, (rowIndex + 1) * 8)
                   .map((collaborator) => (
                     <div
                       key={collaborator.id}
-                      className="flex-1 group bg-card hover:bg-accent rounded-xl p-3 flex items-center gap-4 transition-colors border border-border/50"
+                      className="group bg-card hover:bg-accent rounded-xl p-3 flex items-center gap-3 transition-colors border border-border/50 overflow-hidden"
                     >
                       <Avatar className="h-12 w-12 shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
                         <AvatarImage
