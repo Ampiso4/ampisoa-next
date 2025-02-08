@@ -7,9 +7,26 @@ import { ProjectCard } from "@/components/ui/project-card";
 import Link from "next/link";
 
 export default function Home() {
-  const collaborators = Array.from({ length: 50 }, (_, i) => ({
+  const collaborators = Array.from({ length: 16 }, (_, i) => ({
     id: i + 1,
-    name: `Team Member ${i + 1}`,
+    name: [
+      "Alex Thompson",
+      "Sarah Chen",
+      "Marcus Johnson",
+      "Priya Patel",
+      "James Wilson",
+      "Emma Rodriguez",
+      "David Kim",
+      "Olivia Taylor",
+      "Michael Chang",
+      "Sofia Garcia",
+      "Ryan Mitchell",
+      "Ava Williams",
+      "Lucas Brown",
+      "Isabella Lee",
+      "Ethan Carter",
+      "Maya Singh",
+    ][i],
     role: ["Developer", "Designer", "Product Manager", "DevOps", "QA Engineer"][
       Math.floor(Math.random() * 5)
     ],
@@ -146,41 +163,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Collaborators Section */}
-      <section className="container py-20 border-t">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Our Team</h2>
-          <p className="text-lg text-muted-foreground max-w-[800px] mx-auto">
-            Meet our talented team of developers, designers, and product
-            specialists who bring these projects to life.
-          </p>
+      {/* Team Section */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-grid-slate-600/[0.04] bg-[size:32px_32px]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent" />
         </div>
-        <div className="flex flex-wrap gap-6 justify-center">
-          {collaborators.map((collaborator) => (
-            <div
-              key={collaborator.id}
-              className="flex flex-col items-center gap-2 transition-transform hover:scale-105"
-            >
-              <Avatar className="h-16 w-16 border-2 border-primary/20">
-                <AvatarImage
-                  src={collaborator.avatar}
-                  alt={collaborator.name}
-                />
-                <AvatarFallback>
-                  {collaborator.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </AvatarFallback>
-              </Avatar>
-              <div className="text-center">
-                <p className="font-medium text-sm">{collaborator.name}</p>
-                <p className="text-xs text-muted-foreground">
-                  {collaborator.role}
-                </p>
+
+        <div className="container relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-100 to-gray-400">
+              Our Creative Team
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-[800px] mx-auto">
+              Meet our talented team of developers, designers, and product
+              specialists who bring these projects to life.
+            </p>
+          </div>
+
+          <div className="grid grid-rows-2 gap-4">
+            {Array.from({ length: 2 }).map((_, rowIndex) => (
+              <div key={rowIndex} className="flex gap-4 w-full">
+                {collaborators
+                  .slice(rowIndex * 8, (rowIndex + 1) * 8)
+                  .map((collaborator) => (
+                    <div
+                      key={collaborator.id}
+                      className="flex-1 group bg-card hover:bg-accent rounded-xl p-3 flex items-center gap-4 transition-colors border border-border/50"
+                    >
+                      <Avatar className="h-12 w-12 shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
+                        <AvatarImage
+                          src={collaborator.avatar}
+                          alt={collaborator.name}
+                          className="object-cover"
+                        />
+                        <AvatarFallback className="bg-gradient-to-br from-gray-800 to-gray-600 text-white">
+                          {collaborator.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="min-w-0">
+                        <p className="font-medium text-sm truncate">
+                          {collaborator.name}
+                        </p>
+                        <p className="text-xs text-muted-foreground truncate">
+                          {collaborator.role}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>
