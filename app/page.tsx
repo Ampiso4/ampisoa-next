@@ -62,9 +62,9 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="h-[85vh] flex flex-col relative overflow-hidden">
         {/* Hero Background */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <img
             src="https://picsum.photos/seed/portfolio-hero/1920/1080"
             alt="Hero background"
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="container relative z-10 text-center space-y-8">
+        <div className="container flex-1 flex flex-col items-center justify-center relative z-10 text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl [text-shadow:_0_1px_2px_rgb(0_0_0_/_20%)]">
               Crafting Digital Excellence
@@ -97,9 +97,11 @@ export default function Home() {
               <Link href="/contact">Let's Connect</Link>
             </Button>
           </div>
+        </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        {/* Scroll Indicator */}
+        <div className="relative z-10 pb-8 flex justify-center">
+          <div className="flex flex-col items-center gap-2 animate-bounce">
             <span className="text-sm text-muted-foreground">
               Scroll to explore
             </span>
@@ -123,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="container py-20">
+      <section id="projects" className="container pt-32 pb-20">
         <h2 className="text-3xl font-bold tracking-tight mb-8">
           Featured Projects
         </h2>
