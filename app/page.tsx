@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/ui/project-card";
 import Link from "next/link";
 
 export default function Home() {
-  const collaborators = Array.from({ length: 5 }, (_, i) => ({
+  const collaborators = Array.from({ length: 16 }, (_, i) => ({
     id: i + 1,
     name: [
       "Alex Thompson",
@@ -20,6 +20,12 @@ export default function Home() {
       "Olivia Taylor",
       "Michael Chang",
       "Sofia Garcia",
+      "Ryan Mitchell",
+      "Ava Williams",
+      "Lucas Brown",
+      "Isabella Lee",
+      "Ethan Carter",
+      "Maya Singh",
     ][i],
     role: ["Developer", "Designer", "Product Manager", "DevOps", "QA Engineer"][
       Math.floor(Math.random() * 5)
@@ -74,11 +80,30 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between">
-          <div className="flex items-center space-x-4 font-bold">
-            <span>My Portfolio</span>
+        <div className="container flex h-16 items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+            >
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+            <span className="font-bold text-lg">Portfolio</span>
           </div>
-          <NavMenu />
+          <div className="flex-1 flex justify-center">
+            <NavMenu />
+          </div>
+          <div className="w-[100px]" /> {/* Spacer for visual balance */}
         </div>
       </header>
 
