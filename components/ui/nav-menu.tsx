@@ -14,12 +14,12 @@ import Link from "next/link";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Projects",
-    href: "#projects",
+    href: "/#projects",
     description: "View my featured projects and work samples.",
   },
   {
-    title: "About",
-    href: "#about",
+    title: "Profile",
+    href: "/profile",
     description: "Learn more about my background and expertise.",
   },
   {
@@ -58,9 +58,16 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact
+              Home
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/profile" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Profile
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
