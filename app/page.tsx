@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/ui/nav-menu";
 import { ProjectCard } from "@/components/ui/project-card";
+import Link from "next/link";
 
 export default function Home() {
   const projects = [
@@ -58,8 +59,8 @@ export default function Home() {
         </p>
         <div className="flex gap-4">
           <Button size="lg">View Projects</Button>
-          <Button size="lg" variant="outline">
-            Contact Me
+          <Button size="lg" variant="outline" asChild>
+            <Link href="/contact">Contact Me</Link>
           </Button>
         </div>
       </section>

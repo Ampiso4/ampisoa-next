@@ -23,9 +23,9 @@ const components: { title: string; href: string; description: string }[] = [
     description: "Learn more about my background and expertise.",
   },
   {
-    title: "Blog",
-    href: "/blog",
-    description: "Read my thoughts on development and technology.",
+    title: "Contact",
+    href: "/contact",
+    description: "Get in touch with me for inquiries or collaborations.",
   },
 ];
 
@@ -68,6 +68,13 @@ export function NavMenu() {
           <Link href="/profile" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Profile
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

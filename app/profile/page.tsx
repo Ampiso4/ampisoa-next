@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/ui/nav-menu";
+import Link from "next/link";
 
 export default function Profile() {
   const skills = [
@@ -62,7 +63,9 @@ export default function Profile() {
               </p>
               <div className="flex gap-4">
                 <Button>Download CV</Button>
-                <Button variant="outline">Contact Me</Button>
+                <Button variant="outline" asChild>
+                  <Link href="/contact">Contact Me</Link>
+                </Button>
               </div>
             </div>
           </div>
