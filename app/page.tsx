@@ -8,6 +8,16 @@ import Link from "next/link";
 export default function Home() {
   const projects = [
     {
+      title: "Fitness Tracking App",
+      description:
+        "A modern mobile application for tracking workouts, nutrition, and health goals built with React Native.",
+      imageUrl: "https://picsum.photos/seed/fitness1/800/600",
+      technologies: ["React Native", "TypeScript", "Redux", "Node.js"],
+      demoUrl: "https://demo-fitnessapp.com",
+      githubUrl: "https://github.com/username/fitness-app",
+      detailsUrl: "/projects/fitness-app",
+    },
+    {
       title: "E-Commerce Platform",
       description:
         "A modern e-commerce platform built with Next.js and TypeScript, featuring a responsive design and cart functionality.",
