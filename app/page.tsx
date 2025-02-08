@@ -25,6 +25,7 @@ export default function Home() {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
       demoUrl: "https://demo-ecommerce.com",
       githubUrl: "https://github.com/username/ecommerce",
+      detailsUrl: "/projects/ecommerce",
     },
     {
       title: "Task Management App",
@@ -34,6 +35,7 @@ export default function Home() {
       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
       demoUrl: "https://demo-taskapp.com",
       githubUrl: "https://github.com/username/taskapp",
+      detailsUrl: "/projects/taskapp",
     },
     {
       title: "AI Image Generator",
@@ -43,6 +45,7 @@ export default function Home() {
       technologies: ["Python", "TensorFlow", "FastAPI", "React"],
       demoUrl: "https://demo-aigen.com",
       githubUrl: "https://github.com/username/aigen",
+      detailsUrl: "/projects/aigen",
     },
   ];
 

@@ -89,6 +89,247 @@ Key Features:
     appStoreUrl: "https://apps.apple.com/app/fitness-app",
     playStoreUrl: "https://play.google.com/store/apps/fitness-app",
   },
+  ecommerce: {
+    title: "E-Commerce Platform",
+    description:
+      "A modern e-commerce platform built with Next.js and TypeScript, featuring a responsive design and cart functionality.",
+    fullDescription: `Our e-commerce platform provides a seamless shopping experience with modern web technologies. The platform is built with performance and user experience in mind.
+
+Key Features:
+• Dynamic product catalog with search and filters
+• Real-time inventory management
+• Secure payment processing
+• User authentication and profiles
+• Order tracking and history
+• Responsive design for all devices
+• Admin dashboard
+• Analytics and reporting`,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe",
+      "AWS",
+    ],
+    images: [
+      {
+        url: "https://picsum.photos/seed/ecommerce-hero/1920/1080",
+        caption: "Homepage & Featured Products",
+      },
+      {
+        url: "https://picsum.photos/seed/ecommerce-catalog/1200/800",
+        caption: "Product Catalog",
+      },
+      {
+        url: "https://picsum.photos/seed/ecommerce-cart/1200/800",
+        caption: "Shopping Cart",
+      },
+      {
+        url: "https://picsum.photos/seed/ecommerce-admin/1200/800",
+        caption: "Admin Dashboard",
+      },
+    ],
+    features: [
+      {
+        title: "Product Management",
+        description:
+          "Easily manage products, categories, and inventory with our intuitive admin interface.",
+      },
+      {
+        title: "Smart Search",
+        description:
+          "Advanced search functionality with filters and real-time suggestions.",
+      },
+      {
+        title: "Secure Checkout",
+        description:
+          "PCI-compliant payment processing with multiple payment options.",
+      },
+      {
+        title: "Analytics Dashboard",
+        description:
+          "Comprehensive analytics and reporting for business insights.",
+      },
+    ],
+    metrics: [
+      {
+        label: "Products Listed",
+        value: "10K+",
+      },
+      {
+        label: "Monthly Orders",
+        value: "5K+",
+      },
+      {
+        label: "User Rating",
+        value: "4.9/5",
+      },
+    ],
+    demoUrl: "https://demo-ecommerce.com",
+    githubUrl: "https://github.com/username/ecommerce",
+  },
+  taskapp: {
+    title: "Task Management App",
+    description:
+      "A collaborative task management application with real-time updates and team features.",
+    fullDescription: `Our task management application helps teams stay organized and productive with real-time collaboration features and intuitive project management tools.
+
+Key Features:
+• Real-time task updates and collaboration
+• Project boards and lists
+• Team management and permissions
+• File attachments and sharing
+• Due date reminders
+• Comment threads and mentions
+• Activity timeline
+• Mobile-responsive design`,
+    technologies: [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "Express",
+      "Redis",
+      "Docker",
+    ],
+    images: [
+      {
+        url: "https://picsum.photos/seed/task-hero/1920/1080",
+        caption: "Dashboard Overview",
+      },
+      {
+        url: "https://picsum.photos/seed/task-board/1200/800",
+        caption: "Project Board",
+      },
+      {
+        url: "https://picsum.photos/seed/task-team/1200/800",
+        caption: "Team Collaboration",
+      },
+      {
+        url: "https://picsum.photos/seed/task-mobile/1200/800",
+        caption: "Mobile Experience",
+      },
+    ],
+    features: [
+      {
+        title: "Real-time Collaboration",
+        description:
+          "See changes instantly as team members update tasks and projects.",
+      },
+      {
+        title: "Project Organization",
+        description: "Organize tasks with boards, lists, and custom fields.",
+      },
+      {
+        title: "Team Management",
+        description: "Manage team members and set granular permissions.",
+      },
+      {
+        title: "Activity Tracking",
+        description:
+          "Monitor project progress with detailed activity timelines.",
+      },
+    ],
+    metrics: [
+      {
+        label: "Active Teams",
+        value: "1K+",
+      },
+      {
+        label: "Tasks Completed",
+        value: "100K+",
+      },
+      {
+        label: "User Satisfaction",
+        value: "4.7/5",
+      },
+    ],
+    demoUrl: "https://demo-taskapp.com",
+    githubUrl: "https://github.com/username/taskapp",
+  },
+  aigen: {
+    title: "AI Image Generator",
+    description:
+      "An AI-powered image generation tool that creates unique artwork based on text descriptions.",
+    fullDescription: `Our AI Image Generator leverages cutting-edge machine learning models to transform text descriptions into stunning visual artwork. The platform provides an intuitive interface for both casual users and professional creators.
+
+Key Features:
+• Text-to-image generation
+• Style transfer and customization
+• Batch processing
+• High-resolution output
+• Custom training options
+• API integration
+• Gallery and sharing
+• Commercial licensing`,
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "Docker",
+      "GCP",
+    ],
+    images: [
+      {
+        url: "https://picsum.photos/seed/ai-hero/1920/1080",
+        caption: "AI Generation Interface",
+      },
+      {
+        url: "https://picsum.photos/seed/ai-gallery/1200/800",
+        caption: "Generated Artwork Gallery",
+      },
+      {
+        url: "https://picsum.photos/seed/ai-style/1200/800",
+        caption: "Style Customization",
+      },
+      {
+        url: "https://picsum.photos/seed/ai-batch/1200/800",
+        caption: "Batch Processing",
+      },
+    ],
+    features: [
+      {
+        title: "Advanced AI Models",
+        description:
+          "Multiple AI models for different artistic styles and requirements.",
+      },
+      {
+        title: "Style Control",
+        description:
+          "Fine-tune the output with detailed style and parameter controls.",
+      },
+      {
+        title: "Batch Generation",
+        description:
+          "Generate multiple variations or process bulk requests efficiently.",
+      },
+      {
+        title: "Developer API",
+        description:
+          "Integrate image generation capabilities into your applications.",
+      },
+    ],
+    metrics: [
+      {
+        label: "Images Generated",
+        value: "1M+",
+      },
+      {
+        label: "Active Users",
+        value: "25K+",
+      },
+      {
+        label: "API Requests",
+        value: "500K+/day",
+      },
+    ],
+    demoUrl: "https://demo-aigen.com",
+    githubUrl: "https://github.com/username/aigen",
+  },
 };
 
 export default function ProjectDetails() {
@@ -216,24 +457,28 @@ export default function ProjectDetails() {
                 View Code
               </a>
             </Button>
-            <Button variant="outline" asChild>
-              <a
-                href={project.appStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                App Store
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a
-                href={project.playStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Play Store
-              </a>
-            </Button>
+            {"appStoreUrl" in project && (
+              <Button variant="outline" asChild>
+                <a
+                  href={project.appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  App Store
+                </a>
+              </Button>
+            )}
+            {"playStoreUrl" in project && (
+              <Button variant="outline" asChild>
+                <a
+                  href={project.playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Play Store
+                </a>
+              </Button>
+            )}
           </div>
         </div>
 
