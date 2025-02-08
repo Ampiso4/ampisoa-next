@@ -112,9 +112,9 @@ export default function ProjectDetails() {
       </header>
 
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative min-h-screen">
         {/* Hero Image */}
-        <div className="w-full h-[70vh] relative overflow-hidden">
+        <div className="w-full h-screen relative overflow-hidden">
           <div className="absolute inset-0">
             <img
               src={project.images[0].url}
@@ -126,7 +126,7 @@ export default function ProjectDetails() {
         </div>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 flex items-center pb-20">
           <div className="container">
             <div className="max-w-3xl space-y-6">
               <div className="space-y-4">
@@ -159,6 +159,28 @@ export default function ProjectDetails() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-sm text-muted-foreground">
+            Scroll to explore
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-foreground"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
         </div>
       </div>
 
