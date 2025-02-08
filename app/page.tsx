@@ -62,19 +62,63 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container flex flex-col items-center justify-center gap-6 py-20 text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-          Welcome to My Portfolio
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-          Explore my latest projects and see what I've been working on. Each
-          project showcases different skills and technologies.
-        </p>
-        <div className="flex gap-4">
-          <Button size="lg">View Projects</Button>
-          <Button size="lg" variant="outline" asChild>
-            <Link href="/contact">Contact Me</Link>
-          </Button>
+      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        {/* Hero Background */}
+        <div className="absolute inset-0">
+          <img
+            src="https://picsum.photos/seed/portfolio-hero/1920/1080"
+            alt="Hero background"
+            className="w-full h-full object-cover opacity-90"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+        </div>
+
+        {/* Hero Content */}
+        <div className="container relative z-10 text-center space-y-8">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl [text-shadow:_0_1px_2px_rgb(0_0_0_/_20%)]">
+              Crafting Digital Excellence
+            </h1>
+            <p className="max-w-[800px] mx-auto text-xl sm:text-2xl text-muted-foreground [text-shadow:_0_1px_2px_rgb(0_0_0_/_20%)]">
+              From mobile apps to web platforms, I bring ideas to life with
+              modern technology and thoughtful design.
+            </p>
+          </div>
+          <div className="flex justify-center gap-4">
+            <Button size="lg" className="text-lg px-8">
+              <Link href="#projects">View Projects</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8"
+              asChild
+            >
+              <Link href="/contact">Let's Connect</Link>
+            </Button>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span className="text-sm text-muted-foreground">
+              Scroll to explore
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-foreground"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </div>
         </div>
       </section>
 
