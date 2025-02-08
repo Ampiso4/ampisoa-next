@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/ui/project-card";
 import Link from "next/link";
 
 export default function Home() {
-  const collaborators = Array.from({ length: 16 }, (_, i) => ({
+  const collaborators = Array.from({ length: 5 }, (_, i) => ({
     id: i + 1,
     name: [
       "Alex Thompson",
@@ -20,12 +20,6 @@ export default function Home() {
       "Olivia Taylor",
       "Michael Chang",
       "Sofia Garcia",
-      "Ryan Mitchell",
-      "Ava Williams",
-      "Lucas Brown",
-      "Isabella Lee",
-      "Ethan Carter",
-      "Maya Singh",
     ][i],
     role: ["Developer", "Designer", "Product Manager", "DevOps", "QA Engineer"][
       Math.floor(Math.random() * 5)
@@ -182,9 +176,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-rows-2 gap-4">
+          <div className="grid grid-rows-2 gap-3 max-w-6xl mx-auto">
             {Array.from({ length: 2 }).map((_, rowIndex) => (
-              <div key={rowIndex} className="flex gap-4 w-full">
+              <div key={rowIndex} className="flex gap-3 w-full">
                 {collaborators
                   .slice(rowIndex * 8, (rowIndex + 1) * 8)
                   .map((collaborator) => (
