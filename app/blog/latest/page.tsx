@@ -2,6 +2,7 @@
 
 import { Input } from "@/components/ui/input";
 import { NavMenu } from "@/components/ui/nav-menu";
+import Image from "next/image";
 
 interface BlogPost {
   title: string;
@@ -145,7 +146,7 @@ export default function LatestBlogPage() {
                   className="group relative overflow-hidden rounded-xl bg-card border"
                 >
                   <div className="aspect-[16/9] overflow-hidden">
-                    <img
+                    <Image
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

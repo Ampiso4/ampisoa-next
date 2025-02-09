@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/ui/nav-menu";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Profile() {
@@ -50,7 +51,7 @@ export default function Profile() {
           {/* Profile Image & Basic Info */}
           <div className="md:w-1/3">
             <div className="rounded-lg overflow-hidden mb-6">
-              <img
+              <Image
                 src="https://picsum.photos/seed/profile/400/400"
                 alt="Profile"
                 className="w-full aspect-square object-cover"

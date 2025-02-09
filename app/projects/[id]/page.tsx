@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/ui/nav-menu";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
@@ -357,7 +358,7 @@ export default function ProjectDetails() {
         {/* Hero Image */}
         <div className="w-full h-screen relative overflow-hidden">
           <div className="absolute inset-0">
-            <img
+            <Image
               src={project.images[0].url}
               alt={project.title}
               className="w-full h-full object-cover opacity-85"
@@ -486,7 +487,7 @@ export default function ProjectDetails() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {project.images.map((image, index) => (
             <div key={index} className="rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={image.url}
                 alt={image.caption}
                 className="w-full aspect-video object-cover"

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -25,7 +26,7 @@ export function ProjectCard({
   return (
     <div className="rounded-lg border bg-card shadow-sm transition-all hover:shadow-md">
       <div className="aspect-video relative overflow-hidden rounded-t-lg">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
           className="object-cover w-full h-full"

@@ -65,7 +65,7 @@ export default function Contact() {
           <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
           <p className="text-muted-foreground mb-8">
             Feel free to reach out to me for any inquiries or collaboration
-            opportunities. I'll get back to you as soon as possible.
+            opportunities. I&apos;ll get back to you as soon as possible.
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

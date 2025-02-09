@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/ui/nav-menu";
 import { ProjectCard } from "@/components/ui/project-card";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -111,7 +112,7 @@ export default function Home() {
       <section className="h-[85vh] flex flex-col relative overflow-hidden">
         {/* Hero Background */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="https://picsum.photos/seed/portfolio-hero/1920/1080"
             alt="Hero background"
             className="w-full h-full object-cover opacity-90"
@@ -140,7 +141,7 @@ export default function Home() {
               className="text-lg px-8"
               asChild
             >
-              <Link href="/contact">Let's Connect</Link>
+              <Link href="/contact">Let&apos;s Connect</Link>
             </Button>
           </div>
         </div>
