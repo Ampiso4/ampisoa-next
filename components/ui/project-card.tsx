@@ -27,6 +27,8 @@ export function ProjectCard({
     <div className="rounded-lg border bg-card shadow-sm transition-all hover:shadow-md">
       <div className="aspect-video relative overflow-hidden rounded-t-lg">
         <Image
+          width={400}
+          height={400}
           src={imageUrl}
           alt={title}
           className="object-cover w-full h-full"

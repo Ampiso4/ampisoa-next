@@ -147,6 +147,8 @@ export default function LatestBlogPage() {
                 >
                   <div className="aspect-[16/9] overflow-hidden">
                     <Image
+                      width={800}
+                      height={600}
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

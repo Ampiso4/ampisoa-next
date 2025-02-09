@@ -55,6 +55,8 @@ export default function Profile() {
                 src="https://picsum.photos/seed/profile/400/400"
                 alt="Profile"
                 className="w-full aspect-square object-cover"
+                width={400}
+                height={400}
               />
             </div>
             <div className="space-y-4">

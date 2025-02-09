@@ -359,6 +359,8 @@ export default function ProjectDetails() {
         <div className="w-full h-screen relative overflow-hidden">
           <div className="absolute inset-0">
             <Image
+              width={400}
+              height={400}
               src={project.images[0].url}
               alt={project.title}
               className="w-full h-full object-cover opacity-85"
@@ -488,6 +490,8 @@ export default function ProjectDetails() {
           {project.images.map((image, index) => (
             <div key={index} className="rounded-lg overflow-hidden">
               <Image
+                width={400}
+                height={400}
                 src={image.url}
                 alt={image.caption}
                 className="w-full aspect-video object-cover"

@@ -116,6 +116,8 @@ export default function Home() {
             src="https://picsum.photos/seed/portfolio-hero/1920/1080"
             alt="Hero background"
             className="w-full h-full object-cover opacity-90"
+            width={1920}
+            height={1080}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
         </div>
