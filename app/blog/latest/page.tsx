@@ -21,8 +21,7 @@ const latestPosts: BlogPost[] = [
     date: "2024-02-09",
     category: "React",
     readTime: "10 min read",
-    image:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60",
+    image: "https://picsum.photos/seed/react-components/800/600",
   },
   {
     title: "Getting Started with Next.js 13",
@@ -31,8 +30,7 @@ const latestPosts: BlogPost[] = [
     date: "2024-02-08",
     category: "Tech",
     readTime: "5 min read",
-    image:
-      "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&auto=format&fit=crop&q=60",
+    image: "https://picsum.photos/seed/nextjs-13/800/600",
   },
   {
     title: "2024 Web Development Trends",
@@ -41,8 +39,7 @@ const latestPosts: BlogPost[] = [
     date: "2024-02-08",
     category: "Industry",
     readTime: "7 min read",
-    image:
-      "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=60",
+    image: "https://picsum.photos/seed/webdev-2024/800/600",
   },
 ];
 
